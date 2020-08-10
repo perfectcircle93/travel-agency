@@ -20,7 +20,7 @@ describe('Component Hero', () => {
   
     const renderedTitle = component.find('.title').text();
     expect(renderedTitle).toEqual(expectedTitle);
-    expect(component.find('image').prop('src')).toEqual(expectedImage);
+    expect(component.find('.image').prop('src')).toEqual(expectedImage);
   });
 
   it('renders correct classNames', () => {
