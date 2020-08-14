@@ -179,6 +179,20 @@
       "start-date": "",
       "totalCost": "$51,381",
       "id": 15
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "all-inclusive"
+      ],
+      "adults": "2",
+      "children": "1",
+      "yourName": "m",
+      "contactInfo": "bke",
+      "start-date": "2020-08-12T22:00:00.000Z",
+      "totalCost": "$172,582",
+      "id": 16
     }
   ]
 }
