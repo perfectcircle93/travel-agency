@@ -1,6 +1,6 @@
 import React from 'react';
 //import styles from './HappyHourAd.scss';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 class HappyHourAd extends React.Component {
   constructor(){
@@ -23,7 +23,7 @@ class HappyHourAd extends React.Component {
   
 
   render()  {
-    const countDown = this.getCountdownTime;
+    const countDown = this.getCountdownTime();
     return (
       <div>
         <h3 className='title'>Happy Hour</h3>
@@ -35,10 +35,10 @@ class HappyHourAd extends React.Component {
   }
 }
 
-/*HappyHourAd.propTypes = {
+HappyHourAd.propTypes = {
   title: PropTypes.string,
   promoDescription: PropTypes.string,
-};*/
+};
 
 
 
