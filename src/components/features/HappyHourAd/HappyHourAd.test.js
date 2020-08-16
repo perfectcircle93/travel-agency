@@ -102,3 +102,9 @@ describe('Component HappyHourAd during Happy Hour', () => {
   checkDescriptionAtTime('12:59:59', mockProps.promoDescription);
 });
 
+
+describe('Component HappyHourAd when countdown meets zero', () => {
+  checkDescriptionAfterTime('11:57:58', 2, '120');
+  checkDescriptionAfterTime('11:59:58', 3, mockProps.promoDescription);
+});
+
