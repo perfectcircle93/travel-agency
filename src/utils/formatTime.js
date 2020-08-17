@@ -1,1 +1,5 @@
-export const formatTime = () => 'formatted time';
+export const formatTime = (countDown) => {
+  if (countDown == undefined) {
+    return null;
+  }
+};
