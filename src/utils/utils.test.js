@@ -32,7 +32,7 @@ it('should return time in hh:mm:ss if arg is proper', () => {
 });
 
 describe('formatDate', () => {
-  it('should return null if htere is no arg', () => {
+  it('should return null if there is no arg', () => {
     expect(formatDays()).toBe(null);
   });
   it('should return null if arg is not a number', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './DaysToSummer.scss';
-import {formatDays} from '../../../utils/formatDays';
+import {formatTime} from '../../../utils/formatTime';
 
 
 class DaysToSummer extends React.Component {
@@ -17,8 +17,8 @@ class DaysToSummer extends React.Component {
     const oneDay = 24 * 60 * 60 * 1000;
     const nextHoliday = new Date(Date.UTC(currentTime.getUTCFullYear(), 5, 21, 0, 0, 0));
 
-    if((currentTime.getUTCMonth() == 5 && 
-    currentTime.getUTCDate() >= 21) || 
+    if((currentTime.getUTCMonth() == 5 &&
+    currentTime.getUTCDate() >= 21) ||
     currentTime.getUTCMonth() > 5) {
       nextHoliday.setFullYear(currentTime.getUTCFullYear() + 1);
     }
@@ -27,16 +27,16 @@ class DaysToSummer extends React.Component {
     currentTime.getUTCMonth() == 6 ||
     currentTime.getUTCMonth() == 7 ||
     (currentTime.getUTCMonth() == 8 && currentTime.getUTCDate() < 23)) {
-      return '';
+      return 'Test';
     } else {
-      return Math.round(Math.abs(nextHoliday.getTime() - currentTime.getTime())/oneDay);
+      return formatTime(Math.round(Math.abs(nextHoliday.getTime() - currentTime.getTime())/oneDay));
     }
   }
 
   render() {
     return (
       <div className={styles.component}>
-        <h3 className={styles.daysDescription}>{formatDays(this.getCountdownDays())}</h3>
+        <h3 className={styles.daysDescription}>{this.getCountdownDays()}</h3>
       </div>
     );
   }
